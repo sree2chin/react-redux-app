@@ -22,3 +22,51 @@ header input {
 	border: solid 1px #eee;
 	margin: 5px;
 }
+
+/*POSTS FILE */
+
+.iteratorDiv {
+	width: 300px;
+	text-align: center;
+	background: steelblue;
+	border: solid 1px #eee;
+	margin: 5px;
+	height: 30px;
+	transition: all 1s ease-in;
+}
+
+.basic-enter {
+	background: black;
+	transition: all 1s ease-in;
+}
+
+.basic-enter.basic-enter-active {
+	background: red;
+	transition: all 1s ease-in;
+}
+
+.basic-leave {
+	transform: translateX(-100%);
+	background: red;
+	transition: all 1s ease-in;
+}
+
+.basic-appear {
+	/*opacity: 0.1;*/
+	transform: scale(0.4);
+}
+
+.basic-appear.basic-appear-active {
+	/*opacity: 1;*/
+	transform: scale(1);
+	transition: all 0.3s ;
+}
+
+
+
+
+
+
+
+
+

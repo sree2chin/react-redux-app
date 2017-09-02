@@ -15,11 +15,35 @@ import React from 'react';
 //class Header extends Component{           //ea6
 class Header extends React.Component{
 
+	//set initial state.
 	constructor(props) {
 		super(props);
 		this.state = {
 			keywords: ""
 		}
+	}
+
+	//Before rendering
+	componentWillMount(){
+		console.log("in componentWillMount")
+	}
+
+	componentWillUpdate() {
+		console.log("Before updating the state");
+	}
+
+	componentDidUpdate() {
+		console.log("After updating the state");
+	}
+	//gets called when this component gets new props
+	componentWillReceiveProps() {
+		console.log("BEFORE RECEIVING PROPS");
+	}
+
+	// we can decide whether to update state or not, by default this returns true.
+	// we can access this.state here 
+	shouldComponentUpdate(nextProps, nextState) {
+		return true;
 	}
 
 	handleInputChange(event) {
@@ -28,6 +52,7 @@ class Header extends React.Component{
 		console.log(this.state);
 	}
 
+	//RENDER JSX
 	render() {
 		return (
 			<header> 
@@ -39,6 +64,18 @@ class Header extends React.Component{
 			</header>
 		)
 	}
+
+	//AFTER COMPONENT IS RENDERED
+	componentDidMount() {
+		console.log("in didMount");
+	}
+
+	componentWillUnMount(){
+		console.log("in componentWillUnMount")
+	}
+
 }
 
 export default Header;
+
+
